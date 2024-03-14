@@ -1,0 +1,10 @@
+*{
+    color: rgb(203, 203, 218);
+}
+RODAPE{
+    font-size: medium ;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: fixed ;
+    
+}
