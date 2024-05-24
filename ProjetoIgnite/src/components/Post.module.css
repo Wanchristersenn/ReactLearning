@@ -82,8 +82,13 @@
 
   
 }
-.contentForm button[type=submit]:hover{
-  background: var(--green-300);
+.contentForm button[type=submit]:not(:disabled)::hover{
+ background: var(--green-300);
+}
+.contentform button[type=submit]:disabled{
+  opacity: 0.7;
+  cursor: not-allowed;
+  
 }
 
 .commentList{
