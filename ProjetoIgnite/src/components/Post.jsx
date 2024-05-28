@@ -7,6 +7,8 @@ import { ptBR } from "date-fns/locale"
 import { useState } from "react"
 
 export const Post = ({ author, publisheDAT, content }) => {
+ 
+
   const [comments, setComments] = useState(["Post muito, bacana, hein?!"])
 
   const [newCommentText, setNewCommentText] = useState("")
@@ -23,6 +25,8 @@ export const Post = ({ author, publisheDAT, content }) => {
     locale: ptBR,
     addSuffix: true,
   })
+
+  const isNewCommnetEmpty = newCommentText.length === 0
 
   function handleCreateNewComment(event) {
     event.preventDefault()
@@ -96,7 +100,7 @@ export const Post = ({ author, publisheDAT, content }) => {
         />
 
         <footer>
-          <button type="submit"   disabled={newCommentText.length === 0} >
+          <button type="submit"   disabled={isNewCommnetEmpty} >
             Comentar
           </button>
         </footer>
